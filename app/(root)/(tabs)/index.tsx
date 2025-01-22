@@ -13,12 +13,6 @@ export default function Index() {
       <Text className='font-bold text-3xl mr-10 font-rubik  '>
         Welcome to real estate
       </Text>
-      <Link href='/sign-in' className='font-bold'>
-        Sign in
-      </Link>
-      <Link href='/explore'>Explore</Link>
-      <Link href='/profile'>Profile</Link>
-      <Link href='/properties/1'>Property</Link>
     </View>
   );
 }
