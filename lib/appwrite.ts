@@ -1,12 +1,15 @@
 import { Account, Avatars, Client, OAuthProvider } from 'react-native-appwrite';
 import * as Linking from 'expo-linking';
 import { openAuthSessionAsync } from 'expo-web-browser';
+import Constants from 'expo-constants';
 
 export const config = {
   platform: 'com.jsm.restate',
   endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
 };
+
+console.log('test', config.endpoint, config.projectId);
 
 export const client = new Client();
 
@@ -60,7 +63,7 @@ export async function logout() {
   }
 }
 
-export async function getUser() {
+export async function getCurrentUser() {
   try {
     const result = await account.get();
     if (result.$id) {
